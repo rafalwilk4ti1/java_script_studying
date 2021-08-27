@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script type="text/javascript" src="script.js"></script> -->
+     <script type="text/javascript" src="script.js"></script>
     <title>Document</title>
 
 </head>
@@ -19,12 +19,12 @@
 onclick = "document.getElementById('light').src='bulbon.jpg'">Turn on the light </button>
 
 
-<img src="bulboff.jpg" id='light' width="100px">
+<img src="images/bulboff.jpg" id='light' width="100px">
 
 
 
 <button
-onclick = "document.getElementById('light').src='bulboff.jpg'">Turn off the light </button>
+onclick = "document.getElementById('light').src='images/bulboff.jpg'">Turn off the light </button>
 
 <br><br><br>
 <button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">Click me to make larger text!</button>
@@ -33,21 +33,38 @@ onclick = "document.getElementById('light').src='bulboff.jpg'">Turn off the ligh
 <button type="button" onclick="document.getElementById('demo').style.display='none';">If you want to hide me?</button>
 <button type="button" onclick="document.getElementById('demo').style.display='block';">Now I can be visable!</button>
 <br>
+<button onclick="window.print()">Print this page</button>
+<div onmouseover="this.style.backgroundColor='red'">myDIV.</div>
+
+<p id='demo5'></p>
+<button type="button" onclick="document.getElementById('demo5').innerHTML = sth() ";>Try me</button>
+
+<button onclick="textChanger()">Change text!</button>
+<p id="demo6">My favourite car is BMW </p>
+
+
 <script>
 document.write('Hello this is my first text written using JavaScript!');
-alert(5+99);
-console.log(15%2);
+
 
 function sth() {
     return 'something'
 }
 
+const cars = [1, 'String', 3.5]
+alert(cars);
+
+
+
+function textChanger() {
+    let text = document.getElementById("demo6").innerHTML;
+    document.getElementById("demo6").innerHTML = text.replace("BMW","Mercedes");
+}
+
 </script>
-<button onclick="window.print()">Print this page</button>
 
 
-<p id='demo5'></p>
-<button type="button" onclick="document.getElementById('demo5').innerHTML = sth() ";>Try me</button>
+
 
 </body>
 </html>
